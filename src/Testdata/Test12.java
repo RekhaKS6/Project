@@ -14,6 +14,7 @@ public class Test12 {
 
 	public static void main(String[] args) throws InvalidFormatException, IOException 
 	{
+		//To read excel
 		System.setProperty("webdriver.chrome.driver","/home/tyss/Desktop/chromedriver");
 		WebDriver driver=new ChromeDriver();
 		FileInputStream fl=new FileInputStream("/home/tyss/Desktop/data.xlsx");
@@ -24,6 +25,7 @@ public class Test12 {
 		FileOutputStream fout=new FileOutputStream("/home/tyss/Desktop/data.xlsx");
 		wb.write(fout);
 		wb.getSheet("ValidLoginLogout").getRow(1).createCell(4).setCellValue("Homepage");
+		
 		}
 
 }
